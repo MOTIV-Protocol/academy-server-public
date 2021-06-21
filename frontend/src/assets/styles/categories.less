@@ -1,0 +1,89 @@
+.category {
+  &__tabs {
+    padding-top: var(--f7-toolbar-height);
+  }
+
+  &__filter-popup {
+    &--button {
+      height: 30vw;
+      background-color: #EEE;
+      font-size: 24px;
+      font-weight: 600;
+      border-radius: 15px;
+      color: #333;
+      margin-bottom: 8px;
+      padding: 16px;
+    }
+  }
+
+  &__toolbar {
+    // Framework7 CSS를 무시해야하기에 별도 방법이 없어 important 사용
+    top: var(--f7-toolbar-height) !important;
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+
+    &--inner {
+      width: unset !important;
+
+      .tab-link {
+        width: unset !important;
+        padding: 0px 8px;
+      }
+    }
+  }
+
+  &__sort-sheet {
+    height: auto;
+    --f7-sheet-bg-color: #fff;
+    &--title {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 8px;
+    }
+  }
+
+
+  &__filter {
+    margin-top: var(--f7-toolbar-height);
+    height: var(--f7-toolbar-height);
+    overflow-x: scroll;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 8px 16px;
+    background-color: white;
+    
+    & > a {
+      margin: 0px 2px;
+    }
+
+    &--sort {
+      height: 30px;
+      border-radius: 16px;
+      padding: 0px 8px;
+      border: 1px solid #AAA;
+      color: #333;
+      font-weight: 600;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &--filter {
+      height: 30px;
+      border-radius: 16px;
+      padding: 0px 8px;
+      border: 1px solid #AAA;
+      color: #333;
+      font-weight: 600;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &--sub-category {
+      height: 30px;
+      border-radius: 16px;
+      padding: 8px;
+      color: white !important; // 다른 CSS에 덮혀서 임시처리
+      font-weight: 600;
+      background-color: var(--f7-theme-color-shade);
+    }
+  }
+}

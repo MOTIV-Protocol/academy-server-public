@@ -1,0 +1,190 @@
+@import url('~dropzone/dist/dropzone.css');
+@import 'swiper/components/pagination/pagination.less';
+@import "line-awesome.min.css";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "skeleton.less";
+@import 'index.less';
+@import 'coupons.less';
+@import 'schools.less';
+@import 'reviews.less';
+@import 'comments.less';
+@import 'categories.less';
+@import 'point_histories.less';
+@import 'lectures.less';
+@import 'orders.less';
+
+/* iOS Cordova Tweak */
+.device-ios {
+  height: 100vh;
+}
+
+:root {
+  --f7-theme-color: #2196f3;
+  --f7-theme-color-rgb: 33, 150, 243;
+  --f7-theme-color-shade: #108cf1;
+  --f7-theme-color-tint: #369df1;
+}
+
+.color-theme {
+  color: var(--f7-theme-color) !important;
+}
+
+/* Your app custom styles here */
+form.login-form {
+  --f7-input-bg-color: #F4F4F4;
+
+  .list .item-input-outline {
+
+    --f7-input-outline-border-color: #00000000;
+
+    .item-floating-label {
+      background-color: #F4F4F4;
+      color: #9E9E9E;
+    }
+
+    &.item-input-focused,
+    &.item-input-with-value {
+      --f7-input-outline-border-color: #121212;
+
+      input,
+      .item-floating-label {
+        background-color: var(--f7-list-bg-color);
+      }
+    }
+  }
+
+  .form-divider {
+    background: #F8F8F8;
+    height: 8px;
+    border: solid 0.5px #EEEEEE;
+    width: 100%;
+  }
+
+  .agreement-title {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.comment-tab {
+  display: none;
+}
+
+
+
+@font-face {
+  font-family: 'calendar correction';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../../fonts/calendar_correction.ttf);
+  unicode-range: U+c77c;
+}
+
+.calendar-day-number {
+  font-family: 'calendar correction' !important;
+}
+
+.trans-navbar {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.01));
+}
+
+.trans-page-content {
+  padding-top: 0px;
+}
+
+.show-wrap-action {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 7px 10px 0;
+  border-top: 1px solid #eee;
+  z-index: 99;
+  background: #fff;
+  height: 60px;
+
+  button.button-large {
+    font-weight: 800;
+    font-size: 17px;
+  }
+}
+
+.show-heart {
+  i {
+    position: absolute;
+    font-size: 30px;
+    left: 9px;
+    top: 7px;
+    color: var(--f7-theme-color);
+  }
+}
+
+.show-heart-count {
+  position: absolute;
+  top: 37px;
+  left: 19px;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.item-input .item-inner.row {
+  flex-direction: row;
+}
+
+.time-left-container {
+  font-size: 15px;
+  text-align: right;
+
+  span#cert-time-left {
+    color: #f03e3e;
+  }
+}
+
+.agree-wrap-box {
+  margin-bottom: 30px;
+
+  .ck {
+    position: relative;
+
+    .button {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -1px;
+      text-decoration: underline;
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    position: relative;
+    padding-top: 10px;
+    padding-right: 40px;
+
+    .item-inner {
+      margin-left: 8px;
+      display: inline-block;
+      font-size: 15px;
+      line-height: 24px;
+      color: #696969;
+      letter-spacing: -1px;
+      vertical-align: middle
+    }
+
+    .icon-checkbox {
+      margin-top: 10px;
+    }
+  }
+}
+
+.agree-box {
+  margin-bottom: 20px;
+
+  .agree-all {
+    float: right;
+  }
+}

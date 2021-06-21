@@ -1,0 +1,424 @@
+ko:
+  active_admin:
+    filters:
+      predicates:
+        from: 시작일
+        to: 종료일
+
+  attributes:
+    id: ID
+    user: 사용자
+    name: 이름
+    gender: 성별
+    date: 날짜
+    memo: 메모
+    user_type: 회원유형
+    user_limit: 최대인원
+    accept_email: "이메일 수신동의"
+    accept_sms: "SMS 수신동의"
+    email: 이메일
+    phone: 전화번호
+    group_time: 모임날짜
+    password: 비밀번호
+    password_confirmation: 비밀번호 확인
+    address1: 기본주소
+    address2: 상세주소
+    agree_tos:
+    agree_privacy: 개인정보취급방침에 동의합니다
+    zipcode: 우편번호
+    summary: 요약 설명
+    description: 소개글
+    note: 메모
+    bank_account: 계좌번호
+    nickname: 닉네임
+    body: 내용
+    item: 상품
+    quantity: 수량
+    total: 총 금액
+    state: 상태
+    order_number: 주문 번호
+    paid_at: 결제 시간
+    cancelled_at: 결제 취소 시간
+    payment_method: 결제 방법
+    expires_at: "만료 시간"
+    image: "이미지"
+    position: "순서"
+    birthday: "생년월일"
+    created_at: "생성시간"
+    completed_at: "주문결제시간"
+    updated_at: "수정시간"
+    deleted_at: "삭제시간"
+    reserve_at: "예약 시간"
+    reserved_at: "예약 시간"
+    price: "가격"
+    amount: "상품수량"
+    conversation_type: "코칭종류"
+    start_at: "시작시간"
+    end_at: "종료시간"
+    status: "상태"
+    status_str: "상태"
+    review: "리뷰"
+    level: 등급
+    coupon_rule: "쿠폰규칙"
+    number: "번호"
+    used: "사용됨"
+    url: "URL"
+    current_sign_in_at: "최근 로그인"
+    sign_in_count: "로그인 횟수"
+    object_type: "타입"
+    is_private: "비공개"
+    publish_date: "공개일"
+    view_count: 조회수
+    title: 제목
+    content: 내용
+    remark: 비고
+    holder: 예금주
+    post: 게시물
+    pay: 급여
+    open: 영업시간
+    follower: "팔로워"
+    following: "팔로잉"
+    user_list: "회원목록"
+    reviews: "리뷰"
+    comments: "댓글"
+    receiver_phone: 수신자 번호
+    sender_phone: 발신자 번호
+    tag_list: 해시태그
+    video: 비디오
+    star: 평점
+
+  activerecord:
+    attributes:
+      review:
+        content: 내용
+        score: 별점
+        user: 사용자
+        school: 학원
+      lecture:
+        title: 강의명
+        price: 수강료
+        category: 카테고리
+        school: 학원
+        teacher: 담당 선생님
+      school:
+        order_count: 등록 수
+        review_count: 리뷰 수
+        comment_count: 원장님 댓글 수
+        like_count: 찜하기 수
+        average_score: 평점
+        name: 학원명
+        owner: 원장님
+        location: 학원위치
+        business_number: 사업자등록번호
+        business_owner: 사업자명
+        business_brand: 사업자상표
+        business_address: 사업자주소
+        phone: 학원 전화번호
+        introduce: 학원소개
+        location_info: 학원 정보
+        opening_time: 학원 영업 시간
+      user:
+        point: 적립금
+        name: 이름
+        email: 이메일
+        password: 비밀번호
+        phone: 전화번호
+        address1: 주소
+        address2: 상세주소
+        zipcode: 우편번호
+        gender: 성별
+        role: 역할
+        sign_in_count: 로그인 횟수
+        accept_sms: SMS 수신
+        accept_email: 이메일 수신
+        lat: 위도
+        lng: 경도
+        reviews_average: 리뷰평점 평균
+        reviews_count: 리뷰개수
+        device_type: 기기종류
+        image: 프로필 사진
+      contact:
+        user: 사용자
+        title: 제목
+        phone: 전화번호
+        email: 이메일
+      event:
+        title: 제목
+        content: 내용
+        color: 색상
+        start_date: 시작일
+        end_date: 종료일
+        event_type: 이벤트 종류
+      category:
+        title: 카테고리명
+      order:
+        name: 주문자명
+        phone: 주문자 전화번호
+        zipcode: 우편변호
+        address1: 배송지 주소
+        address2: 상세주소
+        point: 적립금
+        completed_at: 주문완료시간
+        quantity: 주문상품 수량
+        deposit_user_name: 무통장입금자명
+        total: 총 결제금액
+        total_without_shipping: 배송비제외 결제금액
+        user: 사용자
+        item_total: 상품 총금액
+        shipment_total: 배송비 총금액
+        shipment_state: 배송상태
+        status: 주문상태
+        payment_method: 결제방식
+        uid: UID
+        shipment_number: 송장번호
+        shipment_company: 택배사
+        order_number: 주문번호
+        payment_total: 정산금액
+        school: 등록학원
+        pay_method: 결제수단
+        say_to_teacher: 선생님께 한마디
+        say_to_owner: 원장님께 한마디
+        calculate_history: 정산
+        user_name: 구매자 이름
+      line_item:
+        price: 상품가격
+        option: 옵션
+      comment:
+        user: 작성자
+        body: 내용
+      notice:
+        position: 순서
+        title: 공지사항 제목
+      faq:
+        title: 질문
+        content: 대답
+      calculate_history:
+        name: 정산명
+        order_count: 총 주문내역 수
+        price: 총 결제 금액
+        payment: 총 정산 금액
+        profit: 총 수익
+        status: 정산현황
+      coupon:
+        user: 쿠폰 소유자
+        discount_price: 할인가격
+        minimum_order_price: 최소주문가격
+        expires_at: 사용만료기한
+        order: 사용 주문
+        used_at: 사용일자
+        created_at: 발급일자
+
+    models:
+      dashboard: 대시보드
+      user: "사용자"
+      admin_user: 어드민
+      category: 카테고리
+      item: 상품
+      like: 찜
+      line_item: 주문상품
+      order: 주문
+      refund: 환불
+      delivery: 배송
+      post: 게시물
+      tag: 해쉬태그
+      qna: Q&A
+      notice: 공지사항
+      faq: FAQ
+      calculate_history: 정산내역
+      calculates_order: 정산처리
+      order_calculation: 주문별 
+      review: 리뷰
+      comment: 댓글
+      contact: 문의
+      event: 이벤트
+      notification: 알림내역
+      coupon: 쿠폰
+      lecture: 강의
+      school: 학원
+      image: 이미지
+
+    errors:
+      messages:
+        record_invalid: 데이터 검증에 실패하였습니다. %{errors}
+        restrict_dependent_destroy:
+          has_one: "%{record}가 존재하기 때문에 삭제할 수 없습니다"
+          has_many: "%{record}가 존재하기 때문에 삭제할 수 없습니다"
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "중 문제가 있습니다."
+            name:
+              blank: "항목이 비어있습니다"
+            allow_email: "이메일 수신동의"
+            allow_sms: "SMS 수신동의"
+            birthday:
+              blank: "항목이 비어있습니다"
+            phone:
+              blank: "항목이 비어있습니다"
+            password:
+              blank: "항목이 비어있습니다"
+            username:
+              blank: "항목이 비어있습니다"
+            email:
+              taken: "이미 존재하는 이메일입니다."
+              blank: "항목이 비어있습니다"
+            gender:
+              blank: "항목이 비어있습니다"
+            company:
+              blank: "항목이 비어있습니다"
+            job:
+              blank: "항목이 비어있습니다"
+
+  enum:
+    event:
+      event_type:
+        banner: 홈 배너형
+        in_page: 페이지 내 슬라이드형
+    order:
+      status:
+        cart: 장바구니
+        ready: 준비
+        paid: 결제완료
+        complete: 주문완료
+        canceled: 주문취소
+      pay_method:
+        card: 카드
+        kakao: 카카오페이
+        toss: 토스
+    user:
+      gender:
+        male: 남성
+        female: 여성
+      role:
+        student: 학생
+        teacher: 선생님
+        owner: 원장님
+    pointhistory:
+      status:
+        accumulate: 적립
+        usage: 사용
+        rollback: 차감
+        refund: 환불
+    faq:
+      classification:
+        to_register: 회원가입
+        to_order: 바로결제
+        to_review: 리뷰관리
+        to_use: 이용문의
+        to_complain: 불편문의
+        etc: 기타
+    calculate_history:
+      status:
+        yet: 처리 필요
+        done: 완료
+    # report:
+    #   _type:
+    #     abuse: 욕설
+    #     indecent: 음란물
+    #     advertising: 불법광고
+    #     others: 기타
+    #   status:
+    #     waiting: 대기중
+    #     completed: 처리완료
+
+  time:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%Y-%m-%d"
+      long: "%Y-%m-%d %H:%M"
+  date:
+    month_names:
+    -
+    - 1월
+    - 2월
+    - 3월
+    - 4월
+    - 5월
+    - 6월
+    - 7월
+    - 8월
+    - 9월
+    - 10월
+    - 11월
+    - 12월
+    formats:
+      default: "%Y-%m-%d"
+      short: "%Y-%m-%d"
+      long: "%Y-%m-%d"
+    order:
+      - :year
+      - :month
+      - :day
+
+  views:
+    pagination:
+      next: 다음
+      last: 마지막
+      first: 처음
+      prev: 이전
+      truncate: ...
+
+
+  devise:
+    confirmations:
+      confirmed: "이메일 인증에 성공했습니다."
+      send_instructions: "입력하신 이메일로 곧 인증메일을 보내드리겠습니다. 확인해주세요."
+      send_paranoid_instructions: "가입된 이메일일 경우, 인증메일을 보내드리겠습니다. 확인해주세요."
+    failure:
+      already_authenticated: "이미 로그인했습니다."
+      inactive: "아직 활성화되지 않은 계정입니다."
+      invalid: "없는 계정이거나 이메일 혹은 비밀번호가 틀렸습니다."
+      locked: "잠겨있는 계정입니다."
+      last_attempt: "계정이 잠기기 전 한번 이상 시도했습니다."
+      not_found_in_database: "없는 계정이거나 이메일 혹은 비밀번호가 틀렸습니다."
+      timeout: "세션이 만료되었습니다. 다시 로그인해주세요."
+      unauthenticated: "계속하시려면 로그인해주세요."
+      unconfirmed: "계속하시려면 이메일 인증을 해주세요."
+    mailer:
+      confirmation_instructions:
+        subject: "이메일 인증 메일"
+      reset_password_instructions:
+        subject: "비밀번호 변경 메일"
+      unlock_instructions:
+        subject: "잠금해제 메일"
+      email_changed:
+        subject: "이메일 변경"
+      password_change:
+        subject: "비밀번호 변경"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "Your password has been changed successfully. You are now signed in."
+      updated_not_active: "Your password has been changed successfully."
+    registrations:
+      destroyed: "회원탈퇴 처리완료"
+      signed_up: "반갑습니다!"
+      signed_up_but_inactive: "반갑습니다. 그러나 아직 계정이 활성화되지 않았습니다."
+      signed_up_but_locked: "반갑습니다. 그러나 아직 계정이 잠겨 있습니다."
+      signed_up_but_unconfirmed: "반갑습니다. 그러나 이메일 인증이 추가로 필요합니다."
+      update_needs_confirmation: "이메일 인증 후 정보가 수정됩니다!"
+      updated: "정보 수정 완료!"
+      updated_but_not_signed_in: "정보 수정 완료! 다시 로그인해주세요."
+    sessions:
+      signed_in: "로그인 성공"
+      signed_out: "로그아웃 완료"
+      already_signed_out: "로그아웃 완료"
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "은(는) 이미 인증되었습니다. 다시 로그인해주세요."
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "은(는) 이미 만료되었습니다. 다시 요청해주세요."
+      not_found: "은(는) 찾을 수 없음"
+      not_locked: "은(는) 잠겨 있음"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"

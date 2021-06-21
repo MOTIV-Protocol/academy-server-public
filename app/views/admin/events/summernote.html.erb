@@ -1,0 +1,76 @@
+<html>
+  <head>
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote-lite.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="summernote" style="display:none;"><%= @event.content&.html_safe %></div>
+  </body>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#summernote").summernote({
+        fontNames: [
+          "맑은고딕",
+          "Arial",
+          "Arial Black",
+          "Comic Sans MS",
+          "Courier New"
+        ],
+        fontNamesIgnoreCheck: ["맑은고딕"],
+        tabsize: 2,
+        height: 500,
+        focus: true,
+        disableResizeEditor: true,
+        toolbar: [
+          ["undo", ["undo"]],
+          ["redo", ["redo"]],
+          ["style", ["style"]],
+          ["font", ["bold", "underline", "clear"]],
+          ["fontname", ["fontname"]],
+          ["fontsize", ["fontsize"]],
+          ["color", ["color"]],
+          ["para", ["ul", "ol", "paragraph"]],
+          ["table", ["table"]],
+          ["insert", ["link", "picture"]],
+          ["view", ["fullscreen", "codeview", "help"]]
+        ],
+        callbacks: {
+          onImageUpload: function(file) {
+            img = sendFile(this, file[0]);
+          }
+        }
+      });
+    });
+
+    function sendFile(el, file) {
+      var form_data = new FormData();
+      form_data.append('upload[image]', file);
+      $.ajax({
+        data: form_data,
+        type: 'POST',
+        url: '/uploads',
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (data) {
+          img = document.createElement('img')
+          img.src = JSON.parse(data).image.url
+          console.log(data)
+          $(el).summernote('insertNode', img);
+        }
+      });
+    };
+
+    function replaceSummerNote(){
+      if($("#event_content[name='event[content]'").val() != ""){
+        $("iframe").contents().find(".note-editable").html($("#event_content[name='event[content]'").val());
+      }
+    }
+  </script>
+</html>
+

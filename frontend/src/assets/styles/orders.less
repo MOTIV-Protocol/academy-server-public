@@ -1,0 +1,20 @@
+.order-form{
+  &-point{
+    &__current-point{
+      &--value{
+        padding-right: calc(var(--f7-list-item-padding-horizontal));
+        padding-left: calc(var(--f7-list-item-padding-horizontal) + var(--f7-safe-area-left));
+      }
+    }
+    &__used{
+      &--list{
+        ul::before{
+          content: none;
+        }
+        ul::after{
+          content: none;
+        }
+      }
+    }  
+  }
+}

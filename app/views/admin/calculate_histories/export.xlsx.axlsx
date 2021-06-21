@@ -1,0 +1,8 @@
+wb = xlsx_package.workbook
+
+time = Time.current.to_s(:number)
+wb.add_worksheet(name: time + "정산 내역") do |sheet|
+  @orders.each do |order|
+    sheet.add_row [order.school.owner.bank, order.school.owner.bank_account, order.payment_total, order.school.owner.name]
+  end
+end

@@ -1,0 +1,45 @@
+.point-history{
+  background-color: #eee;
+  &-header{
+    margin: 0;
+    text-align: center;
+    padding: var(--f7-block-margin-vertical) 0;
+    background-color: white;
+    &__title{
+      font-size: x-large;
+    }
+    &__sub-title{
+
+    }
+  }
+  &-list{
+    padding-top: 3%;
+    &__title{
+      background-color: white;
+      display: flex;
+      padding-left: calc(var(--f7-list-item-padding-horizontal) + var(--f7-safe-area-left));
+      font-size: larger;
+      font-weight: 700;
+      padding-bottom: 5%;
+      padding-top: 5%;
+    }
+    &__item{
+      &--inner{
+        display: flex; 
+        justify-content: space-between; 
+        padding-left: calc(var(--f7-list-item-padding-horizontal) + var(--f7-safe-area-left)); 
+        padding-right: calc(var(--f7-list-item-padding-horizontal) + var(--f7-safe-area-right));
+      }
+      &--row{
+
+      }
+      &--title{
+
+      }
+      &--sub-title{
+        color: rgba(0,0,0,0.5); 
+        font-size: small;
+      }
+    }
+  }
+}
